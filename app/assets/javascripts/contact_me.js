@@ -10,6 +10,7 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
+            var authenticity_token = $("input#authenticity_token").val();
             var name = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
@@ -23,6 +24,7 @@ $(function() {
                 url: "/contacts/send_feedback_mail",
                 type: "POST",
                 data: {
+                    authenticity_token: authenticity_token,
                     name: name,
                     phone: phone,
                     email: email,
