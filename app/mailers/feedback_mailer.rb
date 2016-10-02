@@ -1,7 +1,11 @@
 class FeedbackMailer < ApplicationMailer
-  default from: 'skylabinnovation@gmail.com'
+  default from: ENV['FROM_EMAIL_ADDRESS']
 
   def feedback_email(params)
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+    @email = params[:email]
+    @phone = params[:phone]
+    @name = params[:name]
+    @message = params[:message]
+    mail(to: ENV['TO_EMAIL_ADDRESS'], subject: 'User feedback for Skylab Innovations')
   end
 end

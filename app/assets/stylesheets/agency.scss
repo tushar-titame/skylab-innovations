@@ -181,7 +181,7 @@ h6 {
 }
 
 header {
-  background-image: url('../assets/header-bg.jpg');
+  background-image: image_url('header-bg.jpg');
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;
@@ -599,7 +599,7 @@ aside.clients {
 
 section#contact {
   background-color: $gray-darkest;
-  background-image: url('../assets/map-image.png');
+  background-image: image_url('map-image.png');
   background-position: center;
   background-repeat: no-repeat;
 
